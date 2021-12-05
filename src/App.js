@@ -17,18 +17,18 @@ function App() {
             <main className="h-full flex flex-col">
                 <Navbar />
                 <Switch>
-                    <Route
-                        path="/profile"
-                        render={() => {
-                            if (!getCurrentUser()) return <Redirect to="/login" />;
-                            return <Profile />;
-                        }}
-                    />
                     <Route path="/login" component={LoginForm} />
                     <Route
                         path="/register"
                         render={() => {
                             if (!getCurrentUser()) return <RegisterForm />;
+                            return <Profile />;
+                        }}
+                    />
+                    <Route
+                        path="/profile"
+                        render={() => {
+                            if (!getCurrentUser()) return <Redirect to="/login" />;
                             return <Profile />;
                         }}
                     />
