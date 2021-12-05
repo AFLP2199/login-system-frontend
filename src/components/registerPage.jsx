@@ -34,7 +34,7 @@ function RegisterForm() {
             <form onSubmit={(e) => form.handleSubmit(e, doSubmit)} className="flex flex-col p-2 rounded w-72">
                 <img
                     className="block my-4 mx-auto max-h-40 rounded-full"
-                    src="/blank-profile-picture.png"
+                    src={process.env.PUBLIC_URL + "/blank-profile-picture.png"}
                     alt="profile-blank"
                 />
                 {form.renderInput("name", "name", "Name")}
