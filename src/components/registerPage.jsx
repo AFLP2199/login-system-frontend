@@ -4,7 +4,7 @@ import form from "./common/form";
 import { register } from "../services/userService";
 import { loginWithJwt } from "../services/authService";
 
-function RegisterForm(props) {
+function RegisterForm() {
     const [data, setData] = useState({ email: "", password: "", name: "" });
     const [errors, setErrors] = useState({});
 
@@ -17,7 +17,7 @@ function RegisterForm(props) {
         try {
             const response = await register(data);
             loginWithJwt(response.headers["x-auth-token"]);
-            window.location.reload();
+            window.location = "/";
         } catch (error) {
             if (error.response && error.response.status === 400) {
                 const errorlist = { ...errors };

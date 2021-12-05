@@ -4,7 +4,7 @@ import Joi from "joi-browser";
 import { getCurrentUser, login } from "../services/authService";
 import form from "./common/form";
 
-function LoginForm(props) {
+function LoginForm() {
     const [data, setData] = useState({ email: "", password: "" });
     const [errors, setErrors] = useState({});
 
@@ -16,7 +16,7 @@ function LoginForm(props) {
     const doSubmit = async () => {
         try {
             await login(data.email, data.password);
-            window.location.reload();
+            window.location = "/";
         } catch (error) {
             if (error.response && error.response.status === 400) {
                 const errorList = { ...errors };
