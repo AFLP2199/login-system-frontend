@@ -1,4 +1,5 @@
 {
+  "homepage": "https://aflp2199.github.io/login-system-frontend/",
   "name": "login-system-frontend",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.24.0",
     "config": "^3.3.6",
+    "gh-pages": "^3.2.3",
     "joi-browser": "^13.4.0",
     "jwt-decode": "^3.1.2",
     "react": "^17.0.2",
@@ -19,6 +21,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
