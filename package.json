@@ -1,6 +1,5 @@
 {
   "name": "login-system-frontend",
-  "homepage": "https://aflp2199.github.io/login-system-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

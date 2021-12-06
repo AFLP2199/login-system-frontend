@@ -44,7 +44,6 @@ function handleSubmit(e, doSubmit) {
     setErrors(errorList || {});
     if (errorList) return;
 
-    console.log("handlesubmit");
     doSubmit();
 }
 
