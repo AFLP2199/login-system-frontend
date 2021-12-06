@@ -14,7 +14,7 @@ function App() {
     return (
         <div className="App h-screen">
             <ToastContainer />
-            <main className="h-full flex flex-col">
+            <main className="h-full flex flex-col min-h-500">
                 <Navbar />
                 <Switch>
                     <Route path="/login" component={LoginForm} />

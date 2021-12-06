@@ -9,14 +9,14 @@
 }
 
 body {
+  background-image: url('background.jpg');
   @apply font-roboto;
-  @apply bg-fixed;
   @apply bg-cover;
   @apply bg-center;
   @apply bg-no-repeat;
+  @apply min-h-500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('background.jpg');
 }
 
 input:-webkit-autofill,

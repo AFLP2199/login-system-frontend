@@ -31,7 +31,7 @@ function LoginForm() {
     if (getCurrentUser()) return <Redirect to="/" />;
 
     return (
-        <div className="flex justify-center items-center h-full backdrop-filter backdrop-blur-sm md:backdrop-blur-md">
+        <div className="flex justify-center items-center h-full backdrop-filter backdrop-blur-md">
             <form onSubmit={(e) => form.handleSubmit(e, doSubmit)} className="flex flex-col p-2 rounded w-72">
                 <img
                     className="block my-4 mx-auto max-h-40 rounded-full"
