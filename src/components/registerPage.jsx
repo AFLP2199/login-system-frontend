@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Joi from "joi-browser";
+import { toast } from "react-toastify";
 import form from "./common/form";
 import { register } from "../services/userService";
 import { loginWithJwt } from "../services/authService";
@@ -23,6 +24,9 @@ function RegisterForm() {
                 const errorlist = { ...errors };
                 errorlist.email = error.response.data;
                 setErrors({ errorlist });
+            }
+            if (error.response.status === 429) {
+                toast.error("Too many requests.");
             }
         }
     };
